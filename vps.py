@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 
-#TODO Enable a way to omit '-p' flag
-
 import os
 import argparse
+
+#TODO Add proper error messages
 
 class parseArguments():
     parser = argparse.ArgumentParser(description='A simple Xbps wrapper') 
     parser.add_argument('operation', help='Usage: update, remove, install, search')
-    parser.add_argument('-p', '--package', help='Usage: Name of the package used with install, remove, search')
+    parser.add_argument('package', nargs='?', help='Usage: Name of the package used with install, remove, search')
     args = parser.parse_args()
 
 def update():
