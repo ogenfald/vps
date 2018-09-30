@@ -1,4 +1,4 @@
-# vps
+# Void Package System
 A command line wrapper for Void's XBPS package manager
 
 # Installation

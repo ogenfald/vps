@@ -16,15 +16,15 @@ def update():
     os.system('sudo xbps-install -Su')
 
 def remove():
-    print('Running sudo xbps-remove')
+    print('Running sudo xbps-remove ' + p.args.package)
     os.system('sudo xbps-remove ' + p.args.package)
 
 def install():
-    print('Running sudo xbps-install')
+    print('Running sudo xbps-install ' + p.args.package)
     os.system('sudo xbps-install ' + p.args.package)
 
 def search():
-    print('Running xbps-query -Rs')
+    print('Running xbps-query -Rs ' + p.args.package)
     os.system('xbps-query -Rs ' + p.args.package)
 
 def main():
